@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- ==========================================================================
+     ANTES DE PUBLICAR — SUBSTITUA OS PLACEHOLDERS ABAIXO:
+     1. WhatsApp: no <script>, edite a constante WHATSAPP (formato 55 + DDD + número).
+     2. OAB, telefone, e-mail, endereço e bio: procure por "[PLACEHOLDER" neste arquivo.
+     3. Dados do JSON-LD (SEO), logo abaixo, também têm placeholders.
+     PALETA: a Opção 1 (Marinho & Latão) está ativa. Para usar a Opção 2 (Terra &
+     Sálvia), veja o bloco comentado no início do CSS (:root).
+=========================================================================== -->
+
+<title>Adilio Terra — Advocacia Imobiliária | Regularização de imóveis</title>
+<meta name="description" content="Assessoria jurídica em direito imobiliário: regularização de imóveis, usucapião, inventário, retificação de matrícula e due diligence. Para proprietários, compradores, herdeiros e investidores." />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Adilio Terra — Advocacia Imobiliária" />
+<meta property="og:description" content="Regularize seu imóvel com segurança jurídica. Assessoria para proprietários, compradores, herdeiros e investidores." />
+<meta property="og:locale" content="pt_BR" />
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230F2942'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='16' fill='%23B4894C' text-anchor='middle'%3EAT%3C/text%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+<!-- SEO: dados estruturados. Preencha os placeholders. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Attorney",
+  "name": "Adilio Terra — Advocacia Imobiliária",
+  "description": "Advocacia especializada em direito imobiliário.",
+  "areaServed": "Rio de Janeiro",
+  "telephone": "[PLACEHOLDER: +55 21 00000-0000]",
+  "email": "[PLACEHOLDER: email@dominio.com]",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "[PLACEHOLDER: endereço]",
+    "addressLocality": "Rio de Janeiro",
+    "addressRegion": "RJ",
+    "addressCountry": "BR"
+  },
+  "knowsAbout": ["Regularização de imóveis","Usucapião","Inventário","Retificação de matrícula","Adjudicação compulsória","Due diligence imobiliária"]
+}
+</script>
+
+<style>
+/* =========================================================================
+   PALETA — OPÇÃO 1: MARINHO & LATÃO (ativa)
+   Para trocar pela Opção 2, comente este :root e descomente o de baixo.
+   ========================================================================= */
+:root{
+  --primaria:   #0F2942; /* Marinho */
+  --destaque:   #B4894C; /* Latão */
+  --destaque-2: #C99F63; /* Latão claro (hover) */
+  --texto:      #33404A; /* Ardósia */
+  --texto-suave:#5C6874;
+  --fundo:      #E7E1D6; /* Areia */
+  --superficie: #FBFAF7; /* Gelo */
+  --linha:      #DAD2C4;
+  --btn-texto:  #0F2942;
+}
+/* PALETA — OPÇÃO 2: TERRA & SÁLVIA (descomente para usar)
+:root{
+  --primaria:   #26402C;
+  --destaque:   #A4562E;
+  --destaque-2: #BB6a3d;
+  --texto:      #2A2A26;
+  --texto-suave:#5B5F55;
+  --fundo:      #E8DFCF;
+  --superficie: #FBFAF7;
+  --linha:      #D8CDB9;
+  --btn-texto:  #FBFAF7;
+}
+*/
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:'Poppins',system-ui,sans-serif;
+  color:var(--texto);
+  background:var(--superficie);
+  line-height:1.65;
+  font-weight:400;
+}
+h1,h2,h3,.serif{font-family:'Lora',Georgia,serif}
+img{max-width:100%;display:block}
+a{color:inherit}
+
+.wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 22px}
+.eyebrow{
+  font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;
+  font-weight:500;color:var(--destaque);margin-bottom:14px;
+}
+.section{padding:88px 0}
+.section h2{font-size:clamp(1.7rem,4.2vw,2.5rem);font-weight:600;line-height:1.15;color:var(--primaria);max-width:20ch}
+.lead{font-size:1.06rem;color:var(--texto-suave);max-width:60ch;margin-top:14px}
+
+/* rule ornament */
+.rule{height:2px;width:56px;background:var(--destaque);margin:0 0 22px}
+
+/* buttons */
+.btn{
+  display:inline-flex;align-items:center;gap:9px;
+  font-family:'Poppins',sans-serif;font-weight:600;font-size:.98rem;
+  padding:15px 26px;border-radius:40px;border:none;cursor:pointer;
+  text-decoration:none;transition:transform .15s ease,background .2s ease,box-shadow .2s ease;
+}
+.btn-primary{background:var(--destaque);color:var(--btn-texto)}
+.btn-primary:hover{background:var(--destaque-2);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.55)}
+.btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+.btn:focus-visible{outline:3px solid var(--destaque-2);outline-offset:3px}
+
+/* ---------- header ---------- */
+.skip{position:absolute;left:-9999px}
+.skip:focus{position:fixed;left:16px;top:16px;background:#fff;color:var(--primaria);padding:10px 16px;border-radius:8px;z-index:1000}
+header.nav{
+  position:sticky;top:0;z-index:100;background:rgba(251,250,247,.92);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--linha);
+}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:70px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--primaria)}
+.seal{width:40px;height:40px;flex:none}
+.brand b{font-family:'Lora',serif;font-weight:600;font-size:1.12rem;line-height:1;color:var(--primaria)}
+.brand span{display:block;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--destaque);margin-top:3px}
+.nav-links{display:flex;align-items:center;gap:28px}
+.nav-links a{text-decoration:none;font-size:.92rem;color:var(--texto);font-weight:500}
+.nav-links a:hover{color:var(--primaria)}
+.nav-cta{padding:10px 20px;font-size:.9rem}
+.menu-btn{display:none;background:none;border:none;cursor:pointer;padding:8px}
+.menu-btn span{display:block;width:24px;height:2px;background:var(--primaria);margin:5px 0}
+
+/* ---------- hero ---------- */
+.hero{background:var(--primaria);color:#F3EEE4;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:0;background:
+  radial-gradient(1200px 500px at 78% -10%,rgba(180,137,76,.18),transparent 60%);pointer-events:none}
+.hero-in{position:relative;padding:96px 0 104px;max-width:760px}
+.hero .eyebrow{color:var(--destaque)}
+.hero h1{font-size:clamp(2.2rem,6vw,3.7rem);font-weight:600;line-height:1.08;letter-spacing:-.5px}
+.hero h1 em{font-style:italic;color:var(--destaque)}
+.hero p{font-size:clamp(1.05rem,2.4vw,1.28rem);color:#D6CDBB;margin-top:22px;max-width:54ch}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:38px}
+.hero-frame{position:absolute;top:26px;right:26px;bottom:26px;left:26px;border:1px solid rgba(180,137,76,.28);pointer-events:none;display:none}
+@media(min-width:900px){.hero-frame{display:block}}
+
+/* ---------- services ---------- */
+.services{background:var(--fundo)}
+.grid{display:grid;gap:18px;margin-top:44px}
+.services .grid{grid-template-columns:repeat(3,1fr)}
+.card{
+  background:var(--superficie);border:1px solid var(--linha);border-radius:12px;
+  padding:26px 24px;transition:transform .15s ease,box-shadow .2s ease;
+}
+.card:hover{transform:translateY(-3px);box-shadow:0 14px 30px -18px rgba(15,41,66,.35)}
+.card h3{font-size:1.12rem;font-weight:600;color:var(--primaria);margin-bottom:8px}
+.card p{font-size:.94rem;color:var(--texto-suave)}
+.card .k{font-family:'Lora',serif;font-size:.9rem;color:var(--destaque);font-weight:600}
+
+/* ---------- situations ---------- */
+.sit-list{display:grid;grid-template-columns:1fr 1fr;gap:16px 40px;margin-top:40px;max-width:900px}
+.sit-list li{list-style:none;display:flex;gap:14px;align-items:flex-start;padding:16px 0;border-bottom:1px solid var(--linha)}
+.sit-list .mark{font-family:'Lora',serif;color:var(--destaque);font-weight:700;font-size:1.1rem;line-height:1.4;flex:none}
+.sit-list p{font-size:1rem}
+
+/* ---------- process ---------- */
+.process{background:var(--primaria);color:#EDE6D8}
+.process h2{color:#fff}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:22px;margin-top:48px;counter-reset:s}
+.step{position:relative;padding-top:52px}
+.step::before{
+  counter-increment:s;content:"0" counter(s);
+  position:absolute;top:0;left:0;font-family:'Lora',serif;font-size:1.9rem;
+  font-weight:600;color:var(--destaque);
+}
+.step h3{font-size:1.02rem;font-weight:600;color:#fff;margin-bottom:6px}
+.step p{font-size:.86rem;color:#C3BAA8}
+
+/* ---------- differentials ---------- */
+.diff{background:var(--fundo)}
+.diff-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:44px}
+.diff-item{padding:22px;border-left:2px solid var(--destaque)}
+.diff-item h3{font-size:1.06rem;color:var(--primaria);font-weight:600;margin-bottom:6px}
+.diff-item p{font-size:.9rem;color:var(--texto-suave)}
+
+/* ---------- about ---------- */
+.about-in{display:grid;grid-template-columns:280px 1fr;gap:56px;align-items:center;margin-top:40px}
+.about-photo{
+  aspect-ratio:4/5;background:var(--fundo);border:1px solid var(--linha);border-radius:12px;
+  display:flex;align-items:center;justify-content:center;color:var(--texto-suave);
+  font-size:.85rem;text-align:center;padding:20px;
+}
+.about-txt p{margin-bottom:16px;color:var(--texto)}
+.about-meta{font-size:.9rem;color:var(--texto-suave);border-top:1px solid var(--linha);padding-top:16px;margin-top:8px}
+
+/* ---------- faq ---------- */
+.faq{background:var(--superficie)}
+.faq-list{margin-top:40px;max-width:820px}
+details{border-bottom:1px solid var(--linha)}
+summary{
+  cursor:pointer;list-style:none;padding:22px 40px 22px 0;position:relative;
+  font-family:'Lora',serif;font-size:1.1rem;color:var(--primaria);font-weight:500;
+}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:6px;top:20px;font-size:1.4rem;color:var(--destaque);transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{padding:0 0 22px;color:var(--texto-suave);font-size:.98rem;max-width:70ch}
+
+/* ---------- cases ---------- */
+.cases{background:var(--fundo)}
+.cases .grid{grid-template-columns:repeat(3,1fr)}
+.case{background:var(--superficie);border:1px solid var(--linha);border-radius:12px;padding:26px 24px}
+.case .tag{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--destaque);font-weight:600}
+.case p{margin-top:12px;font-size:.98rem;font-family:'Lora',serif;color:var(--primaria);line-height:1.5}
+.cases small{display:block;margin-top:30px;color:var(--texto-suave);font-size:.82rem}
+
+/* ---------- contact / form ---------- */
+.contact{background:var(--primaria);color:#EDE6D8}
+.contact h2{color:#fff}
+.contact .lead{color:#C6BDA8}
+.form-card{
+  background:var(--superficie);color:var(--texto);border-radius:16px;padding:34px;
+  margin-top:40px;max-width:640px;
+}
+.field{margin-bottom:18px}
+.field label{display:block;font-size:.86rem;font-weight:500;color:var(--primaria);margin-bottom:7px}
+.field input,.field textarea{
+  width:100%;padding:13px 15px;border:1px solid var(--linha);border-radius:9px;
+  font-family:inherit;font-size:.98rem;color:var(--texto);background:#fff;
+}
+.field input:focus,.field textarea:focus{outline:2px solid var(--destaque);border-color:var(--destaque)}
+.field textarea{min-height:110px;resize:vertical}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.consent{display:flex;gap:11px;align-items:flex-start;margin:6px 0 22px;font-size:.86rem;color:var(--texto-suave)}
+.consent input{margin-top:4px;width:18px;height:18px;flex:none;accent-color:var(--destaque)}
+.consent a{color:var(--primaria);text-decoration:underline}
+#formMsg{margin-top:16px;font-size:.92rem;padding:0}
+#formMsg.ok{color:#1c6b3f}
+#formMsg.err{color:#8a3b2a}
+.form-card .btn-primary{width:100%;justify-content:center}
+.form-card .btn-primary:disabled{opacity:.5;cursor:not-allowed;transform:none}
+
+/* ---------- footer ---------- */
+footer{background:#0A1E30;color:#B9C2CC;padding:56px 0 34px;font-size:.9rem}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px}
+footer h4{font-family:'Lora',serif;color:#fff;font-size:1.05rem;margin-bottom:14px;font-weight:600}
+footer a{color:#B9C2CC;text-decoration:none}
+footer a:hover{color:var(--destaque)}
+footer ul{list-style:none}
+footer li{margin-bottom:9px}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:36px;padding-top:22px;font-size:.8rem;color:#8592a0;display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between}
+
+/* ---------- responsive ---------- */
+@media(max-width:860px){
+  .services .grid,.cases .grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr;gap:34px 22px}
+  .diff-grid{grid-template-columns:1fr 1fr}
+  .sit-list{grid-template-columns:1fr}
+  .about-in{grid-template-columns:1fr;gap:28px}
+  .about-photo{max-width:260px}
+  .foot-grid{grid-template-columns:1fr}
+  .nav-links{
+    display:none;position:absolute;top:70px;left:0;right:0;background:var(--superficie);
+    flex-direction:column;align-items:flex-start;gap:0;padding:8px 22px 18px;border-bottom:1px solid var(--linha);
+  }
+  .nav-links.open{display:flex}
+  .nav-links a{padding:12px 0;width:100%;border-bottom:1px solid var(--linha)}
+  .nav-links .nav-cta{margin-top:12px}
+  .menu-btn{display:block}
+  .row{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#servicos">Ir para o conteúdo</a>
+
+<!-- ============ HEADER ============ -->
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top" aria-label="Adilio Terra Advocacia">
+      <svg class="seal" viewBox="0 0 44 44" aria-hidden="true">
+        <circle cx="22" cy="22" r="21" fill="none" stroke="var(--destaque)" stroke-width="1"/>
+        <circle cx="22" cy="22" r="17" fill="var(--primaria)"/>
+        <text x="22" y="28" text-anchor="middle" font-family="Lora,serif" font-size="15" font-weight="600" fill="var(--destaque)">AT</text>
+      </svg>
+      <span class="brandtxt"><b>Adilio Terra</b><span>Advocacia Imobiliária</span></span>
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="Navegação principal">
+      <a href="#servicos">Serviços</a>
+      <a href="#processo">Como funciona</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#faq">Dúvidas</a>
+      <a href="#contato" class="btn btn-primary nav-cta">Análise do caso</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero-frame" aria-hidden="true"></div>
+  <div class="wrap hero-in">
+    <p class="eyebrow">Advocacia Imobiliária</p>
+    <h1>Regularize seu imóvel com <em>segurança jurídica</em>.</h1>
+    <p>Assessoria jurídica para proprietários, compradores, herdeiros e investidores que precisam resolver a documentação do seu imóvel.</p>
+    <div class="hero-actions">
+      <a href="#contato" class="btn btn-primary">Solicitar análise do caso</a>
+      <a href="#" id="waHero" class="btn btn-ghost" rel="nofollow">Falar no WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVIÇOS ============ -->
+<section class="section services" id="servicos">
+  <div class="wrap">
+    <div class="rule"></div>
+    <p class="eyebrow">Áreas de atuação</p>
+    <h2>Soluções jurídicas para cada situação do seu imóvel</h2>
+    <div class="grid">
+      <div class="card"><h3>Regularização de imóveis</h3><p>Adequação da documentação para deixar o imóvel regular perante o cartório.</p></div>
+      <div class="card"><h3>Usucapião</h3><p>Reconhecimento da propriedade por posse, na via extrajudicial ou judicial.</p></div>
+      <div class="card"><h3>Inventário com imóveis</h3><p>Transferência de imóveis recebidos em herança para os herdeiros.</p></div>
+      <div class="card"><h3>Retificação de matrícula</h3><p>Correção de erros, divergências ou dados desatualizados no registro.</p></div>
+      <div class="card"><h3>Adjudicação compulsória</h3><p>Obtenção da escritura quando o vendedor não a outorga voluntariamente.</p></div>
+      <div class="card"><h3>Compra e venda</h3><p>Acompanhamento jurídico da negociação, do contrato ao registro.</p></div>
+      <div class="card"><h3>Análise de contratos</h3><p>Revisão de cláusulas e riscos antes da assinatura.</p></div>
+      <div class="card"><h3>Due diligence imobiliária</h3><p>Verificação da situação jurídica do imóvel antes da compra.</p></div>
+      <div class="card"><h3>Escritura e registro</h3><p>Condução da documentação junto ao cartório até o registro final.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SITUAÇÕES ============ -->
+<section class="section" id="situacoes">
+  <div class="wrap">
+    <div class="rule"></div>
+    <p class="eyebrow">Situações que atendemos</p>
+    <h2>Você reconhece algum destes casos?</h2>
+    <ul class="sit-list">
+      <li><span class="mark">—</span><p>Imóvel apenas com contrato de compra e venda, sem escritura.</p></li>
+      <li><span class="mark">—</span><p>Matrícula com erros, divergências ou desatualizada.</p></li>
+      <li><span class="mark">—</span><p>Imóvel recebido em herança e ainda não transferido.</p></li>
+      <li><span class="mark">—</span><p>Financiamento recusado por pendência na documentação.</p></li>
+      <li><span class="mark">—</span><p>Posse antiga sem título de propriedade registrado.</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ PROCESSO ============ -->
+<section class="section process" id="processo">
+  <div class="wrap">
+    <div class="rule"></div>
+    <p class="eyebrow" style="color:var(--destaque)">Como funciona</p>
+    <h2>Um caminho claro, do primeiro contato à solução</h2>
+    <div class="steps">
+      <div class="step"><h3>Contato</h3><p>Você descreve sua situação por WhatsApp ou pelo formulário.</p></div>
+      <div class="step"><h3>Análise inicial</h3><p>Uma primeira leitura do seu caso e do que ele envolve.</p></div>
+      <div class="step"><h3>Avaliação da documentação</h3><p>Exame dos documentos do imóvel e da matrícula.</p></div>
+      <div class="step"><h3>Estratégia jurídica</h3><p>Definição do melhor caminho para resolver a pendência.</p></div>
+      <div class="step"><h3>Acompanhamento</h3><p>Condução do processo com você informado em cada etapa.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DIFERENCIAIS ============ -->
+<section class="section diff">
+  <div class="wrap">
+    <div class="rule"></div>
+    <p class="eyebrow">Como trabalhamos</p>
+    <h2>Compromisso com clareza e segurança</h2>
+    <div class="diff-grid">
+      <div class="diff-item"><h3>Atendimento personalizado</h3><p>Cada imóvel tem uma história; seu caso é tratado individualmente.</p></div>
+      <div class="diff-item"><h3>Linguagem clara</h3><p>Explicações sem juridiquês, para você entender cada passo.</p></div>
+      <div class="diff-item"><h3>Transparência</h3><p>Você acompanha o andamento e sabe o que esperar.</p></div>
+      <div class="diff-item"><h3>Foco em soluções seguras</h3><p>Prioridade para caminhos sólidos e bem fundamentados.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOBRE ============ -->
+<section class="section" id="sobre">
+  <div class="wrap">
+    <div class="rule"></div>
+    <p class="eyebrow">Sobre o advogado</p>
+    <h2>Adilio Terra</h2>
+    <div class="about-in">
+      <div class="about-photo">[PLACEHOLDER: foto profissional do Adilio]</div>
+      <div class="about-txt">
+        <p>[PLACEHOLDER: biografia do Adilio — trajetória, tempo de atuação em direito imobiliário e abordagem de trabalho.]</p>
+        <p>[PLACEHOLDER: formações, pós-graduações e especializações relevantes.]</p>
+        <p class="about-meta">[PLACEHOLDER: OAB/RJ nº 000.000] · Direito Imobiliário</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section faq" id="faq">
+  <div class="wrap">
+    <div class="rule"></div>
+    <p class="eyebrow">Perguntas frequentes</p>
+    <h2>Dúvidas comuns</h2>
+    <div class="faq-list">
+      <details><summary>Em quanto tempo meu caso pode ser resolvido?</summary><p>O prazo depende do tipo de procedimento e da situação da documentação. Isso é avaliado logo na análise inicial do seu caso.</p></details>
+      <details><summary>O atendimento pode ser online?</summary><p>Sim. É possível conduzir boa parte do atendimento de forma remota, com envio de documentos digitalizados.</p></details>
+      <details><summary>Todo caso precisa de ação judicial?</summary><p>Não necessariamente. Muitas situações, como certos casos de usucapião e retificação de matrícula, podem ser resolvidas na via extrajudicial, diretamente no cartório.</p></details>
+      <details><summary>Como funciona a cobrança dos honorários?</summary><p>Os honorários são definidos após a análise do seu caso, de acordo com a complexidade e o tipo de procedimento envolvido. Tudo é combinado de forma transparente antes de qualquer contratação.</p></details>
+      <details><summary>É possível regularizar imóvel que só tem contrato de compra e venda?</summary><p>Em muitos casos, sim. O caminho depende da documentação existente e da situação do imóvel, o que é verificado na avaliação inicial.</p></details>
+      <details><summary>Dá para vender um imóvel que ainda está irregular?</summary><p>O mais seguro é regularizar a documentação antes da venda. A assessoria orienta qual caminho seguir para viabilizar a negociação com segurança.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CASOS ============ -->
+<section class="section cases">
+  <div class="wrap">
+    <div class="rule"></div>
+    <p class="eyebrow">Casos resolvidos</p>
+    <h2>Exemplos ilustrativos de situações atendidas</h2>
+    <div class="grid">
+      <div class="case"><span class="tag">Usucapião</span><p>Proprietário com posse de mais de 15 anos, sem título registrado, obteve a regularização por usucapião extrajudicial.</p></div>
+      <div class="case"><span class="tag">Inventário</span><p>Imóvel recebido em herança, parado por anos, foi transferido aos herdeiros com a documentação regularizada.</p></div>
+      <div class="case"><span class="tag">Retificação</span><p>Divergência na área da matrícula foi corrigida, viabilizando a venda que estava travada.</p></div>
+    </div>
+    <small>Exemplos genéricos e ilustrativos, sem identificação de clientes.</small>
+  </div>
+</section>
+
+<!-- ============ CONTATO / FORM ============ -->
+<section class="section contact" id="contato">
+  <div class="wrap">
+    <div class="rule"></div>
+    <p class="eyebrow" style="color:var(--destaque)">Fale com o escritório</p>
+    <h2>Receba uma análise jurídica do seu caso</h2>
+    <p class="lead">Descreva sua situação e retornaremos com uma orientação sobre os próximos passos.</p>
+
+    <form class="form-card" id="leadForm" novalidate>
+      <div class="field">
+        <label for="nome">Nome completo</label>
+        <input type="text" id="nome" name="nome" autocomplete="name" required />
+      </div>
+      <div class="row">
+        <div class="field">
+          <label for="telefone">Telefone / WhatsApp</label>
+          <input type="tel" id="telefone" name="telefone" autocomplete="tel" required />
+        </div>
+        <div class="field">
+          <label for="cidade">Cidade</label>
+          <input type="text" id="cidade" name="cidade" autocomplete="address-level2" required />
+        </div>
+      </div>
+      <div class="field">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" autocomplete="email" required />
+      </div>
+      <div class="field">
+        <label for="descricao">Descreva sua situação</label>
+        <textarea id="descricao" name="descricao" required></textarea>
+      </div>
+
+      <!-- honeypot anti-spam (não preencher) -->
+      <div class="hp" aria-hidden="true">
+        <label for="website">Não preencha este campo</label>
+        <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+      </div>
+
+      <label class="consent">
+        <input type="checkbox" id="consent" name="consent" required />
+        <span>Autorizo o contato e o tratamento dos meus dados para atendimento, conforme a <a href="privacidade.html">Política de Privacidade</a>.</span>
+      </label>
+
+      <button type="submit" class="btn btn-primary" id="submitBtn" disabled>Enviar para análise</button>
+      <p id="formMsg" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>Adilio Terra — Advocacia Imobiliária</h4>
+        <p>Assessoria jurídica em regularização, usucapião, inventário e demais questões imobiliárias.</p>
+        <p style="margin-top:12px">[PLACEHOLDER: OAB/RJ nº 000.000]</p>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li><a id="waFoot" href="#" rel="nofollow">WhatsApp</a></li>
+          <li>[PLACEHOLDER: (21) 0000-0000]</li>
+          <li>[PLACEHOLDER: email@dominio.com]</li>
+          <li>[PLACEHOLDER: endereço]</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Institucional</h4>
+        <ul>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#faq">Dúvidas frequentes</a></li>
+          <li><a href="privacidade.html">Política de Privacidade</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="ano"></span> Adilio Terra. Todos os direitos reservados.</span>
+      <span>Este site tem caráter meramente informativo, nos termos do Provimento 205/2021 da OAB.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ================== CONFIGURAÇÃO ==================
+   Troque pelo número real do WhatsApp: 55 + DDD + número (só dígitos). */
+const WHATSAPP = "5521999999999"; // [PLACEHOLDER]
+/* ================================================== */
+
+// monta links de WhatsApp
+const waMsg = encodeURIComponent("Olá! Gostaria de uma análise do meu caso imobiliário.");
+const waUrl = "https://wa.me/" + WHATSAPP + "?text=" + waMsg;
+["waHero","waFoot"].forEach(id=>{const el=document.getElementById(id); if(el) el.href=waUrl;});
+
+// ano do rodapé
+document.getElementById("ano").textContent = new Date().getFullYear();
+
+// menu mobile
+const menuBtn=document.getElementById("menuBtn"), navLinks=document.getElementById("navLinks");
+menuBtn.addEventListener("click",()=>{
+  const open=navLinks.classList.toggle("open");
+  menuBtn.setAttribute("aria-expanded",open);
+});
+navLinks.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>navLinks.classList.remove("open")));
+
+// habilita botão só com consentimento marcado
+const consent=document.getElementById("consent"), submitBtn=document.getElementById("submitBtn");
+consent.addEventListener("change",()=>{submitBtn.disabled=!consent.checked;});
+
+// envio do formulário
+const form=document.getElementById("leadForm"), msg=document.getElementById("formMsg");
+form.addEventListener("submit", async (e)=>{
+  e.preventDefault();
+  msg.className=""; msg.textContent="";
+
+  if(document.getElementById("website").value){return;} // honeypot: bot detectado, ignora
+  if(!consent.checked){msg.className="err";msg.textContent="É necessário aceitar a Política de Privacidade.";return;}
+  if(!form.checkValidity()){msg.className="err";msg.textContent="Por favor, preencha todos os campos.";return;}
+
+  const params=new URLSearchParams(location.search);
+  const payload={
+    nome:form.nome.value.trim(),
+    telefone:form.telefone.value.trim(),
+    email:form.email.value.trim(),
+    cidade:form.cidade.value.trim(),
+    descricao:form.descricao.value.trim(),
+    consentimento_lgpd:true,
+    origem:{
+      utm_source:params.get("utm_source")||"",
+      utm_medium:params.get("utm_medium")||"",
+      utm_campaign:params.get("utm_campaign")||""
+    }
+  };
+
+  submitBtn.disabled=true; submitBtn.textContent="Enviando...";
+  try{
+    const r=await fetch("/api/lead",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)});
+    if(!r.ok) throw new Error("backend indisponível");
+    msg.className="ok";
+    msg.textContent="Recebido! Em breve entraremos em contato. Se preferir, fale agora pelo WhatsApp.";
+    form.reset(); submitBtn.textContent="Enviar para análise";
+  }catch(err){
+    // fallback enquanto o backend não está configurado: envia pelo WhatsApp
+    const texto=encodeURIComponent(
+      "Olá! Gostaria de uma análise do meu caso.\n\n"+
+      "Nome: "+payload.nome+"\nTelefone: "+payload.telefone+"\nCidade: "+payload.cidade+
+      "\nE-mail: "+payload.email+"\n\nSituação: "+payload.descricao
+    );
+    msg.className="ok";
+    msg.innerHTML='Quase lá! Toque para enviar sua mensagem: '+
+      '<a href="https://wa.me/'+WHATSAPP+'?text='+texto+'" style="color:var(--destaque);font-weight:600;text-decoration:underline">Enviar pelo WhatsApp</a>';
+    submitBtn.textContent="Enviar para análise"; submitBtn.disabled=false;
+  }
+});
+</script>
+</body>
+</html>
